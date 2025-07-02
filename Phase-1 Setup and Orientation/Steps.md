@@ -177,20 +177,8 @@ sudo rm -rf /var/www/html/install
 * Gained hands-on experience setting up a LAMP stack manually.
 * Learned how e-commerce platforms like OpenCart are deployed and configured.
 * Troubleshot real-world issues like:
-
   * Missing PHP extensions
   * File permission errors
   * Apache configuration
 * Set up a working virtual e-commerce platform ready for applying layered security controls.
-
----
-
-## 📸 10. Suggested Screenshots to Save
-
-* Apache default page
-* File extraction and permissions
-* MySQL database setup
-* OpenCart installation wizard (each step)
-* Admin dashboard after successful login
-
 ---
