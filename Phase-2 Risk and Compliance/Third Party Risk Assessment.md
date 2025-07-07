@@ -147,7 +147,6 @@ Phase-2/
 │   └── third_party/
 │       ├── php_modules.png
 │       ├── apache_modules.png
-│       ├── dpkg_php.png
-│       └── mysql_root_login.png
+│       └── dpkg_php.png    
 ```
 ---
