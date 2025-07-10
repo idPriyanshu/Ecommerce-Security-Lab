@@ -51,9 +51,9 @@ This asset register includes a comprehensive list of physical, digital, human, d
 | Access Control Policy Document  | Defines who has access to what                                   | Policy Document    | Security Folder                                  | High        |
 | Incident Response Template      | Steps for managing a breach                                      | Policy Document    | Documentation Folder                             | Medium      |
 | Business Continuity Plan        | Ensures minimal disruption during disaster                       | Policy Document    | Documentation Folder                             | Medium      |
-| Privacy Policy       | Outlines customer data usage and rights                          | Policy Document    | Public Web Folder                                | High        |
-| Company-Owned Laptops           |  inventory of 100 organizational laptops                | Physical Asset     | Inventory Sheet / Office                         | High        |
+| Privacy Policy                  | Outlines customer data usage and rights                          | Policy Document    | Public Web Folder                                | High        |
+| Company-Owned Laptops           |  inventory of 100 organizational laptops                         | Physical Asset     | Inventory Sheet / Office                         | High        |
 | Network Switch                  | Hardware to connect multiple devices                             | Network Hardware   | Server Room                                      | High        |
-| Firewall Appliance  | Provides network perimeter defense                               | Network Security   | Perimeter/VM Host                                | High        |
+| Firewall Appliance              | Provides network perimeter defense                               | Network Security   | Perimeter/VM Host                                | High        |
 | Storage Server                  | Centralized backup and file storage                              | Storage Asset      |  Storage Device                         | High        |
 | Audit Trail System              | Centralized logging system for auditing                          | Monitoring System  | /var/log/ or Syslog server                       | High        |
