@@ -111,19 +111,64 @@ This document assesses the security risks associated with third-party components
 
 ---
 
-## 5. Risk Summary Table
+## 5. Additional Third-Party Components
 
-| Component               | Version | CVEs Identified   | Risk Level | Mitigation Summary                                             |
-| ----------------------- | ------- | ----------------- | ---------- | -------------------------------------------------------------- |
-| PHP                     | 8.3.6   | 3 (theme-related) | Medium     | Avoid insecure modules, update regularly                       |
-| Apache HTTPD            | 2.4.58  | 3                 | High       | Monitor modules, patch regularly, disable unused functionality |
-| OpenCart                | 4.0.2.3 | 3 (Critical)      | Critical   | Disable dangerous features, patch and monitor                  |
-| MySQL                   | 8.0.42  | 2 (older version) | Medium     | Secure root login, use PoLP accounts                           |
-| External Themes/Plugins | N/A     | Several           | Medium     | Avoid use unless vendor-verified                               |
+### A. Ubuntu 22.04 OS Packages
+
+* Risk: Unpatched vulnerabilities in system components
+* CVE Example: CVE-2024-1086 (local privilege escalation in Linux kernel)
+* Mitigation: Regular updates via `apt`, enable unattended-upgrades
+
+### B. CUPS Print Service
+
+* Version: cups 2.4.2
+* CVE Example: CVE-2023-32360 (buffer overflow in IPP packet handling)
+* Mitigation: Disable if unused, restrict port 631, apply patches
+
+### C. Google Cloud Free Tier
+
+* Risk: Misconfigured public buckets or APIs
+* CVE: Not CVE-specific; security is based on configuration
+* Mitigation: Enforce IAM policies, disable public access
+
+### D. Email/SMTP Notification Module
+
+* Risk: Open relay or spam abuse
+* CVE Example: CVE-2023-30586 (postfix relay bypass)
+* Mitigation: Use SPF/DKIM/DMARC, disable open relay, rate-limit SMTP
+
+### E. Anti-Malware Software
+
+* Component: ClamAV (example AV)
+* CVE Example: CVE-2023-20052 (DoS via crafted file)
+* Mitigation: Automate signature updates, enable scanning logs
+
+### F. Internet Router Firmware
+
+* Risk: Default credentials or outdated firmware
+* CVE Example: CVE-2022-31793 (TP-Link auth bypass)
+* Mitigation: Change default creds, apply latest vendor firmware
 
 ---
 
-## 6. Recommendations
+## 6. Risk Summary Table
+
+| Component             | Version   | CVEs Identified   | Risk Level | Mitigation Summary                                             |
+| --------------------- | --------- | ----------------- | ---------- | -------------------------------------------------------------- |
+| PHP                   | 8.3.6     | 3 (theme-related) | Medium     | Avoid insecure modules, update regularly                       |
+| Apache HTTPD          | 2.4.58    | 3                 | High       | Monitor modules, patch regularly, disable unused functionality |
+| OpenCart              | 4.0.2.3   | 3 (Critical)      | Critical   | Disable dangerous features, patch and monitor                  |
+| MySQL                 | 8.0.42    | 2 (older version) | Medium     | Secure root login, use PoLP accounts                           |
+| Ubuntu OS             | 22.04     | 1+ kernel issues  | High       | Keep kernel and base packages updated                          |
+| CUPS                  | 2.4.2     | 1+ CVEs           | Medium     | Disable if unused, patch                                       |
+| Google Cloud Platform | Free Tier | Config risks      | Medium     | Enforce IAM, restrict access                                   |
+| SMTP Notification     | -         | 1+ CVEs           | Medium     | Harden SMTP settings                                           |
+| Anti-Malware Software | -         | 1+ CVEs           | Medium     | Enable updates, monitor scans                                  |
+| Router Firmware       | Varies    | 1+ CVEs           | High       | Patch firmware, change credentials                             |
+
+---
+
+## 7. Recommendations
 
 * Maintain a list of all third-party components and their versions (Software Bill of Materials).
 * Configure automatic security updates for Ubuntu packages where feasible.
@@ -136,17 +181,4 @@ This document assesses the security risks associated with third-party components
   * `cve-bin-tool` for binary-based CVE detection
   * `trivy` for filesystem and dependency scans
 
----
-
-## 7. Suggested GitHub Structure
-
-```bash
-Phase-2/
-├── third_party_risks.md
-├── screenshots/
-│   └── third_party/
-│       ├── php_modules.png
-│       ├── apache_modules.png
-│       └── dpkg_php.png    
-```
 ---

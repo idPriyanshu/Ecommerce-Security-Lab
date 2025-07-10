@@ -11,7 +11,7 @@ This asset register includes a comprehensive list of physical, digital, human, d
 | Data Protection Officer         | Responsible for data governance and DPDPA compliance             | Role               | Compliance Team                                  | High        |
 | IT Support Staff                | Provides support for systems and hardware                        | Role               | Internal Team                                    | Medium      |
 | Compliance Officer              | Oversees regulatory compliance activities                        | Role               | Compliance Team                                  | High        |
-| Cybersecurity Team (Extended)   | Responsible for threat hunting, incident response, and hardening | Team               | Security Department                              | High        |
+| Cybersecurity Team              | Responsible for threat hunting, incident response, and hardening | Team               | Security Department                              | High        |
 | Developer Team                  | Maintains and enhances OpenCart codebase                         | Team               | Engineering                                      | High        |
 | OpenCart Web App                | Customer-facing e-commerce platform                              | Web Application    | /var/www/html                                    | High        |
 | OpenCart Admin Panel            | Backend management interface                                     | Web Application    | [http://localhost/admin](http://localhost/admin) | High        |
@@ -52,8 +52,9 @@ This asset register includes a comprehensive list of physical, digital, human, d
 | Incident Response Template      | Steps for managing a breach                                      | Policy Document    | Documentation Folder                             | Medium      |
 | Business Continuity Plan        | Ensures minimal disruption during disaster                       | Policy Document    | Documentation Folder                             | Medium      |
 | Privacy Policy                  | Outlines customer data usage and rights                          | Policy Document    | Public Web Folder                                | High        |
-| Company-Owned Laptops           |  inventory of 100 organizational laptops                         | Physical Asset     | Inventory Sheet / Office                         | High        |
-| Network Switch                  | Hardware to connect multiple devices                             | Network Hardware   | Server Room                                      | High        |
+| Company-Owned Laptops           | inventory of 100 organizational laptops                          | Physical Asset     | Inventory Sheet / Office                         | High        |
+| Network Switch                  | Hardware to connect multiple devices                             | Network Device   | Server Room                                      | High        |
+| Internet Router                 | Gateway device connecting LAN to internet                        | Network Device     | Physical router (e.g., 192.168.1.1)               | High        |
 | Firewall Appliance              | Provides network perimeter defense                               | Network Security   | Perimeter/VM Host                                | High        |
 | Storage Server                  | Centralized backup and file storage                              | Storage Asset      |  Storage Device                         | High        |
 | Audit Trail System              | Centralized logging system for auditing                          | Monitoring System  | /var/log/ or Syslog server                       | High        |
