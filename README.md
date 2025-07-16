@@ -16,8 +16,8 @@ This repository contains documentation and configurations developed during a 45-
 - Google Cloud Free Tier
 
 ## 📁 Folder Structure
-- `Phase 1`: Setup and Orientation
-- `Phase 2`: Risk and Compliance
+- `Phase 1` : Setup and Orientation
+- `Phase 2` : Risk and Compliance
 - `Phase 3` : Identity and Access Security
 - `Phase 4` : Network and Cloud Security
 - `Phase 5` : Application and Data Security
